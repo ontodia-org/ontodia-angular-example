@@ -1,0 +1,6 @@
+.angular-ontodia {
+    height: calc(100vh - 50px - 8px * 2); /* 50px - title, 8px - body marginxs*/
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
