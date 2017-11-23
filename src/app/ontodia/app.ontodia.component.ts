@@ -33,6 +33,17 @@ export class AppOntodiaComponent implements OnInit {
         dataProvider: dataProvider,
         validateLinks: true,
       })).then(() => {
+        // Example how you can add new element. This part will be improved.
+        const diagramModel = workspace.getModel();
+        const element = diagramModel.createElement(
+          'http://ailab.ifmo.ru/dialog/tv/schema#hdPremiumChannelPack',
+        );
+        diagramModel.requestElementData([element]);
+        element.set('position', {
+          x: Math.random() * 1000,
+          y: Math.random() * 1000,
+        });
+
         workspace.forceLayout();
         workspace.zoomToFit();
       });
