@@ -1,7 +1,19 @@
 h1 {
-    color: #369;
-    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0;
+    font-family: sans-serif;
+    color: #8395ad;
     font-size: 250%;
     height: 50px; 
     margin: 0;
+}
+
+.main-ui {
+    display: flex;
+}
+
+app-ontodia-component {
+    flex-grow: 1;
+}
+app-element-list-component {
+    flex-grow: 0;
 }

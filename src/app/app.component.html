@@ -1,8 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div>
   <h1>
-    Here is the {{title}} project!
+    Here is the {{title}} project
   </h1>
-  <app-ontodia-component [irisToShow]="irisToShow"></app-ontodia-component>
+  <div class="main-ui">
+    <app-ontodia-component [model]="model"></app-ontodia-component>
+    <app-element-list-component (newIRI)="handleNewIRI($event)" [model]="model"></app-element-list-component>
+  </div>
 </div>
 

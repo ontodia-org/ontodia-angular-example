@@ -1,0 +1,17 @@
+<div class="ontodia-elements">
+    <h2 class="ontodia-elements__title">Added elements:</h2>
+    <ul class="ontodia-elements_list">
+        <li *ngFor="let iri of model.IRIs"
+            [class.selected]="iri === model.selectedIRI"
+            (click)="onSelect(iri)"
+            class="ontodia-elements_list__element"
+            title={{iri}}
+        >
+            {{iri}}
+        </li>
+    </ul>
+    <div class="ontodia-elements_add-element">
+        <input [(ngModel)]="newElementId" class="ontodia-elements_add-element__input" placeholder="New IRI"/>
+        <button class="ontodia-elements_add-element__button" (click)="onPressAdd()" placeholder="Press to add new IRI">Add</button>
+    </div>
+</div>

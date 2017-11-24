@@ -1,0 +1,50 @@
+.ontodia-elements {
+    width: 250px;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ontodia-elements__title {
+    margin-top: 0;
+    font-family: sans-serif;
+    color: #8395ad;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.ontodia-elements_list {
+    padding: 0;
+}
+
+.ontodia-elements_list__element {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: #eaebef;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.ontodia-elements_list__element:hover {
+    background: #d1d3dc;
+}
+
+.ontodia-elements_add-element {
+    display: flex;
+    height: 30px;
+}
+
+.ontodia-elements_add-element__input {
+    flex-grow: 1;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: 1px solid #d0d0d0;
+}
+
+.ontodia-elements_add-element__button {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left: 0px;
+}
