@@ -1,9 +1,7 @@
 import { Component, ViewChild, ElementRef, Input, SimpleChange } from '@angular/core';
 import { OnInit, OnChanges, SimpleChanges } from '@angular/core/src/metadata/lifecycle_hooks';
-import { AppModel } from '../models';
-import { createElement, ClassAttributes } from 'react';
 import * as Ontodia from 'ontodia';
-import * as ReactDOM from 'react-dom';
+import { AppModel } from '../models';
 
 @Component({
   selector: 'app-ontodia-component',
@@ -47,7 +45,7 @@ export class AppOntodiaComponent implements OnInit, OnChanges {
     };
 
     const ontodiaRoot = this.ontodiaRoot.nativeElement;
-    ReactDOM.render(createElement(Ontodia.Workspace, props), ontodiaRoot);
+    Ontodia.renderTo(Ontodia.Workspace, ontodiaRoot, props);
   }
 
   ngOnChanges(changes: SimpleChanges) {
@@ -70,7 +68,7 @@ export class AppOntodiaComponent implements OnInit, OnChanges {
     const elements: Ontodia.Element[] = [];
 
     for (const iri of newIRIs) {
-      const el = diagramModel.createElement(iri);
+      const el: any = diagramModel.createElement(iri);
       elements.push(el);
       el.set('position', {
         x: Math.random() * 1000,

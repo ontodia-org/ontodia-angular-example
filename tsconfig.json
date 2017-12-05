@@ -12,6 +12,11 @@
       "node_modules/@types",
       "node_modules/ontodia/dist/"
     ],
+    "paths": {
+      "ontodia": [
+          "../node_modules/ontodia/dist/ontodia-full.min.js"
+      ]
+    },
     "lib": [
       "es2017",
       "dom"
